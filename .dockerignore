@@ -1,0 +1,9 @@
+.git/
+.gitignore
+_build/
+deps/
+Dockerfile
+Makefile
+README*
+test/
+priv/static/
