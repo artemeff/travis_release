@@ -1,21 +1,9 @@
-# TravisRelease
+# Release assembling using Travis CI
 
-**TODO: Add description**
+---
 
-## Installation
+Define `$DOCKER_USERNAME` and `$DOCKER_PASSWORD` in Travis CI settings
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `travis_release` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:travis_release, "~> 0.1.0"}
-  ]
-end
+```bash
+$ docker run -p 4000:4000 -it --rm test
 ```
-
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at [https://hexdocs.pm/travis_release](https://hexdocs.pm/travis_release).
-
