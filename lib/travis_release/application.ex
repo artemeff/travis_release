@@ -6,6 +6,8 @@ defmodule TravisRelease.Application do
   use Application
 
   def start(_type, _args) do
+    IO.puts "I'm started!"
+
     # List all child processes to be supervised
     children = [
       # Starts a worker by calling: TravisRelease.Worker.start_link(arg)
