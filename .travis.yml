@@ -1,0 +1,23 @@
+language: elixir
+elixir: '1.7'
+otp_release: '21.2'
+
+services:
+  - docker
+
+script:
+  - MIX_ENV=test mix do deps.get, clean, compile --force
+  - MIX_ENV=test mix test
+
+deploy:
+  # build master for latest
+  - provider: script
+    script: bash docker_build latest
+    on:
+      branch: master
+
+  # build tags for versions
+  - provider: script
+    script: bash docker_build $TRAVIS_TAG
+    on:
+      tags: true
