@@ -20,6 +20,7 @@ defmodule TravisRelease.MixProject do
 
   defp deps do
     [
+      {:plug_cowboy, "~> 2.0"},
       {:distillery, "~> 2.0"}
     ]
   end
